@@ -6,11 +6,6 @@ import Image from "next/image";
 import { fetchRecipe } from "@/api/FetchRecipe";
 
 export default function Header() {
-  async function handleSearch(recipe: string) {
-    const res = await fetchRecipe(recipe);
-    console.log("Recipe :", res);
-  }
-
   return (
     <header className="sticky top-0 z-50 h-16 w-full bg-black px-6">
       <div className="mx-auto flex h-full  items-center gap-6 min-w-0 justify-between">
@@ -25,7 +20,7 @@ export default function Header() {
         </Link>
 
         <div className="border flex-1 min-w-0">
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar />
         </div>
 
         <div className="flex gap-5 text-sm font-bold text-white min-w-0">
