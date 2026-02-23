@@ -1,7 +1,8 @@
 export async function fetchRandomRecipe() {
   try {
     const res = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/random.php`
+      `https://www.themealdb.com/api/json/v1/1/random.php`,
+      { cache: "no-store" }
     );
 
     //if API returns 404, 401, etc.

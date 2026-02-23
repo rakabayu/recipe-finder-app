@@ -3,14 +3,13 @@
 import Link from "next/link";
 import SearchBar from "./SearchBar";
 import Image from "next/image";
-import { fetchRecipe } from "@/api/FetchRecipe";
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 h-16 w-full bg-black px-6">
-      <div className="mx-auto flex h-full  items-center gap-6 min-w-0 justify-between">
+      <div className="mx-auto flex h-full items-center gap-3 md:gap-6 min-w-0">
         <Link
-          className="text-xl font-bold text-white whitespace-nowrap"
+          className="text-base md:text-xl font-bold text-white whitespace-nowrap shrink-0"
           href="/"
         >
           Recipe Finder App
@@ -19,11 +18,11 @@ export default function Header() {
           </span>
         </Link>
 
-        <div className="border flex-1 min-w-0">
+        <div className="flex-1 min-w-0">
           <SearchBar />
         </div>
 
-        <div className="flex gap-5 text-sm font-bold text-white min-w-0">
+        <div className="flex gap-3 md:gap-5 text-xs md:text-sm font-bold text-white shrink-0">
           <button className="flex items-center gap-2 hover:underline">
             {" "}
             <Image
@@ -32,7 +31,7 @@ export default function Header() {
               width={20}
               height={20}
             />
-            CATEGORY
+            <span className="hidden md:inline">CATEGORY</span>
           </button>
           <button className="flex items-center gap-2 hover:underline">
             {" "}
@@ -42,7 +41,7 @@ export default function Header() {
               width={20}
               height={20}
             />
-            BOOKMARKS
+            <span className="hidden md:inline">BOOKMARKS</span>
           </button>
         </div>
       </div>
