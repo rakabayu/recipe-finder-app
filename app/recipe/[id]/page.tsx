@@ -29,21 +29,42 @@ export default async function RecipeDetailPage({
   const directions = parseDirections(recipe);
 
   return (
-    <div className="flex h-[calc(100vh-64px)] w-full overflow-hidden px-8 py-8">
+    <div
+      className="flex flex-col md:flex-row
+      min-h-[calc(100vh-64px)]
+      md:h-[calc(100vh-64px)]
+      w-full
+      overflow-visible md:overflow-hidden
+      px-4 md:px-8
+      py-4 md:py-8"
+    >
+      <div className="h-64 md:h-full md:w-1/2">
+        <img
+          src={recipe.strMealThumb}
+          alt={recipe.strMeal}
+          className="h-full w-full object-cover"
+        />
+      </div>
       {/* <div className="py-8 px-8 flex-col justify-center"> */}
-      <div className="w-1/2 overflow-y-auto px-8 py-8 bg-yellow-50">
-        <h2 className="font-bold text-5xl mb-2">
+      <div
+        className="w-full md:w-1/2
+        overflow-visible md:overflow-y-auto
+        px-4 md:px-8
+        py-6
+        bg-yellow-50"
+      >
+        <h2 className="font-bold text-5xl mb-2 text-black">
           {capitalizeWord(recipe.strMeal)}
         </h2>
-        <span className="font-thin text-xl">
+        <span className="font-thin text-xl text-black">
           Originate in: {recipe.strArea}
         </span>
         <div className=" mt-4 mb-4">
-          <h3 className="font-bold">List of Ingredients:</h3>
+          <h3 className="font-bold text-black">List of Ingredients:</h3>
           <ul className="mt-2 space-y-2 list-none">
             {ingredients.map((item, index) => (
-              <li key={index} className="flex gap-3">
-                <span className="w-6 text-right font-semibold">
+              <li key={index} className="flex gap-3 text-black">
+                <span className="w-6 text-right font-semibold text-black">
                   {index + 1}.
                 </span>{" "}
                 {item.measure} {item.ingredient}.
@@ -52,10 +73,10 @@ export default async function RecipeDetailPage({
           </ul>
         </div>
         <div className=" mt-4 mb-4">
-          <h3 className="font-bold">Directions:</h3>
-          <ul className="mt-2 space-y-2 list-none">
+          <h3 className="font-bold text-black">Directions:</h3>
+          <ul className="mt-2 space-y-2 list-none text-black">
             {directions.map((item, index) => (
-              <li key={index} className="flex gap-3">
+              <li key={index} className="flex gap-3 text-black">
                 <span className="w-6 text-right font-semibold">
                   {index + 1}.
                 </span>{" "}
@@ -64,13 +85,6 @@ export default async function RecipeDetailPage({
             ))}
           </ul>
         </div>
-      </div>
-      <div className="w-1/2 sticky top-0 h-full">
-        <img
-          src={recipe.strMealThumb}
-          alt={recipe.strMeal}
-          className="h-full w-full object-cover"
-        />
       </div>
     </div>
   );

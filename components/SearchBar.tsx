@@ -89,7 +89,7 @@ export default function SearchBar() {
         onChange={(e) => handleChange(e.target.value)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className="w-full rounded-full border bg-white px-4 py-2 text-sm outline-none min-w-0 focus:border-blue-400 focus:ring-2 focus:ring-green-200"
+        className="w-full rounded-full border bg-white px-4 py-2 text-sm outline-none min-w-0 text-black focus:border-blue-400 focus:ring-2 focus:ring-green-200"
       />
 
       {/* DROPDOWN */}
