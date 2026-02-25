@@ -13,7 +13,7 @@ export default function Header() {
           href="/"
         >
           Recipe Finder App
-          <span className="ml-2 text-sm font-light italic text-yellow-400">
+          <span className="text-sm font-light italic text-yellow-400 md:ml-2">
             - by Raka Bayu
           </span>
         </Link>
