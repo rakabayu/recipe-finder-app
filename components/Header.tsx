@@ -6,19 +6,19 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 h-16 w-full bg-black px-6">
+    <header className="sticky top-0 z-50 h-auto md:h-16 w-full bg-black px-4 md:px-6 py-2 md:py-0">
       <div className="mx-auto flex h-full items-center gap-3 md:gap-6 min-w-0">
         <Link
-          className="text-base md:text-xl font-bold text-white whitespace-nowrap shrink-0"
+          className="text-base md:text-xl font-bold text-white whitespace-nowrap shrink md:shrink-0"
           href="/"
         >
           Recipe Finder App
-          <span className="ml-2 text-sm font-light italic text-yellow-400">
+          <span className="ml-2 hidden md:inline text-sm font-light italic text-yellow-400">
             - by Raka Bayu
           </span>
         </Link>
 
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 mt-2 md:mt-0">
           <SearchBar />
         </div>
 

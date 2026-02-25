@@ -46,13 +46,7 @@ export default async function RecipeDetailPage({
         />
       </div>
       {/* <div className="py-8 px-8 flex-col justify-center"> */}
-      <div
-        className="w-full md:w-1/2
-        overflow-visible md:overflow-y-auto
-        px-4 md:px-8
-        py-6
-        bg-yellow-50"
-      >
+      <div className="w-full md:w-1/2 md:overflow-y-auto px-4 md:px-8 py-6 bg-yellow-50">
         <h2 className="font-bold text-5xl mb-2 text-black">
           {capitalizeWord(recipe.strMeal)}
         </h2>
