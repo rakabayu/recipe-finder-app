@@ -81,7 +81,7 @@ export default function SearchBar() {
     //   </button>
     // </form>
     <div className="relative flex items-center gap-2 py-2">
-      <Image src="/icons/search.png" alt="Search" width={24} height={24} />
+      <Image src="/icons/search.png" alt="Search" width={20} height={20} />
       <input
         type="text"
         value={query}
@@ -99,7 +99,7 @@ export default function SearchBar() {
             <li
               key={item.id}
               onMouseDown={() => handleSelect(item.id)}
-              className="px-3 py-2 cursor-pointer hover:bg-gray-100"
+              className="px-3 py-2 cursor-pointer hover:bg-gray-100 text-black"
             >
               {item.name}
             </li>

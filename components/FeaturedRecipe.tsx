@@ -18,6 +18,7 @@ export default function FeaturedRecipe({ recipe }: FeaturedRecipeProps) {
           className="h-full w-full object-cover"
         />
       </div>
+
       <div className="flex flex-col justify-center w-full md:w-1/2 px-6 md:px-16 bg-yellow-50 overflow-visible md:overflow-y-auto">
         <p className="font-bold text-xl mt-12 text-black">Today Recipe is :</p>{" "}
         <h3 className="font-bold text-5xl mb-2 text-black">
